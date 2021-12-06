@@ -19,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
+<activity
+    android:name=".Example">
+</activity>
         <meta-data
           android:name="android.max_aspect"
           android:value="4.0"/>
