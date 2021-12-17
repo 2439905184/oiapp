@@ -21,5 +21,9 @@ android {
 }
 
 dependencies {
+<<<<<<< HEAD
+=======
+	api 'com.android.support:design:+'
+>>>>>>> refs/heads/future
     implementation fileTree(dir: "libs", include: ["*.jar"])
 }

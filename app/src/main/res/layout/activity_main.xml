@@ -37,6 +37,15 @@
 		android:text="已经实现的api"
 		android:onClick="apis"/>
 
+<<<<<<< HEAD
+=======
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="清空控制台"
+		android:onClick="cls"/>
+
+>>>>>>> refs/heads/future
 	<TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"

@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.support.design.widget.Snackbar;
 import android.app.Application;
+<<<<<<< HEAD
 //开源版iapp实现
 public class MainActivity extends Activity
 { 
@@ -94,6 +95,105 @@ public class MainActivity extends Activity
             Toast.makeText(ctx,"代码不正确",Toast.LENGTH_LONG).show();
         }
     }*/
+=======
+import android.widget.ListView;
+import android.widget.Switch;
+import java.util.ArrayList;
+import java.lang.reflect.InvocationTargetException;
+//开源版iapp实现
+public class MainActivity extends Activity
+{ 
+   public static LinearLayout console;
+   public static Context ctx;
+   public  static Application app;
+    public void example(View v)
+    {
+        Intent i = new Intent(MainActivity.this,Example.class);
+        startActivity(i);
+    }
+    //已经实现的api
+    public void apis(View v)
+    {
+        Log.d("main","调用反射");
+        try
+        {
+            new JavaTokenizer().invoke(Class.forName("android.util.Log"));
+        } catch(NoSuchMethodException e)
+        {} catch(SecurityException e)
+        {} catch(IllegalArgumentException e)
+        {} catch(IllegalAccessException e)
+        {} catch(InvocationTargetException e)
+        {} catch(ClassNotFoundException e)
+        {}
+        /*       Intent i = new Intent(MainActivity.this,Example.class);
+        startActivity(i);*/
+    }
+    //清空控制台
+    public void cls(View v)
+    {
+        //用于获得悬浮窗列表内容 联创盒子项目
+        //对象数组 
+        ArrayList<View> av1 = new ArrayList()<View>;
+        ArrayList<View> av2 = new ArrayList()<View>;
+        ArrayList<View> av3 = new ArrayList()<View>;
+        ArrayList<View> av4 = new ArrayList()<View>;
+        ArrayList<View> av5 = new ArrayList()<View>;
+        ArrayList<View> av6 = new ArrayList()<View>;
+        ArrayList<View> av7 = new ArrayList()<View>;
+        ArrayList<View> av8 = new ArrayList()<View>;
+        ListView lv = new ListView(this);
+        for(int i = 0;i<lv.getCount();i++)
+        {
+            LinearLayout root =(LinearLayout) lv.getItemAtPosition(i);
+            for(int ti =0;ti<2;i++)
+            {
+                //获取每一个view
+                View func_name  = root.getChildAt(i);
+                av1.add(func_name);
+                String classname = func_name.getClass().getName();
+                if(classname.equals("TextView"))
+                {
+                   TextView tv =(TextView) func_name;
+                   String name =tv.getText().toString();   
+                   //av1.add();
+                }
+              if(classname.equals("Switch"))
+              {
+                  Switch sw = (Switch)func_name;
+                  av1.add(sw);
+                  //获取状态
+                //  boolean check =sw.getTouchDelegate();
+             //     av.add(check);
+              }
+            }  
+        }
+     //   lv.getAdapter().getItem(0);
+    }
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        console=findViewById(R.id.console);
+        //解析tw
+        ctx=getApplicationContext();
+        app = getApplication();
+        Button run=findViewById(R.id.run);
+   
+        run.setOnClickListener(new OnClickListener()
+            {
+                @Override
+                public void onClick(View p1)
+                {
+                    EditText et = findViewById(R.id.code);
+                    String code =  et.getText().toString();
+                    //以后代码移动到这里
+                    iyu3Tokenizer.tokenizer(code);    
+              
+                }
+            });
+    }
+>>>>>>> refs/heads/future
     //分离函数名称和参数
     public static String []split_func(String ppp)
     {
