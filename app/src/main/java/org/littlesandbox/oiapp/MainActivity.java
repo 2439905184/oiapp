@@ -19,6 +19,7 @@ import android.widget.ListView;
 import android.widget.Switch;
 import java.util.ArrayList;
 import java.lang.reflect.InvocationTargetException;
+import android.graphics.Color;
 //开源版iapp实现
 public class MainActivity extends Activity
 { 
@@ -33,7 +34,7 @@ public class MainActivity extends Activity
     //已经实现的api
     public void apis(View v)
     {
-        Log.d("main","调用反射");
+      /*  Log.d("main","调用反射");
         try
         {
             new JavaTokenizer().invoke(Class.forName("android.util.Log"));
@@ -43,49 +44,18 @@ public class MainActivity extends Activity
         {} catch(IllegalAccessException e)
         {} catch(InvocationTargetException e)
         {} catch(ClassNotFoundException e)
-        {}
-        /*       Intent i = new Intent(MainActivity.this,Example.class);
-        startActivity(i);*/
+        {}*/
+        Intent i = new Intent(MainActivity.this,Example.class);
+        startActivity(i);
     }
     //清空控制台
     public void cls(View v)
     {
-        //用于获得悬浮窗列表内容 联创盒子项目
-        //对象数组 
-        ArrayList<View> av1 = new ArrayList()<View>;
-        ArrayList<View> av2 = new ArrayList()<View>;
-        ArrayList<View> av3 = new ArrayList()<View>;
-        ArrayList<View> av4 = new ArrayList()<View>;
-        ArrayList<View> av5 = new ArrayList()<View>;
-        ArrayList<View> av6 = new ArrayList()<View>;
-        ArrayList<View> av7 = new ArrayList()<View>;
-        ArrayList<View> av8 = new ArrayList()<View>;
-        ListView lv = new ListView(this);
-        for(int i = 0;i<lv.getCount();i++)
-        {
-            LinearLayout root =(LinearLayout) lv.getItemAtPosition(i);
-            for(int ti =0;ti<2;i++)
-            {
-                //获取每一个view
-                View func_name  = root.getChildAt(i);
-                av1.add(func_name);
-                String classname = func_name.getClass().getName();
-                if(classname.equals("TextView"))
-                {
-                   TextView tv =(TextView) func_name;
-                   String name =tv.getText().toString();   
-                   //av1.add();
-                }
-              if(classname.equals("Switch"))
-              {
-                  Switch sw = (Switch)func_name;
-                  av1.add(sw);
-                  //获取状态
-                //  boolean check =sw.getTouchDelegate();
-             //     av.add(check);
-              }
-            }  
-        }
+       console.removeAllViews();
+       TextView tip =new TextView(this);
+       tip.setText("oiyu解释器 alpha0.1");
+       tip.setTextColor(Color.WHITE);
+       console.addView(tip);
      //   lv.getAdapter().getItem(0);
     }
     @Override

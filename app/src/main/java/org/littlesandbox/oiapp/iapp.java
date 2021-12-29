@@ -20,7 +20,12 @@ public class iapp extends Application
     public static  Context  ctx ;// super.getApplicationContext();
     public static void _getMIMEType()
     {
-
+//删除这里获得当前调用堆栈
+        StackTraceElement stack[] = Thread.currentThread().getStackTrace();  
+        for(int i=0;i<stack.length;i++){
+            System.out.print(stack[i].getClassName()+" 。"+stack[i].getMethodName()+"-----");
+        }
+        /**/
     }
     //调用系统打开文件
     public static void fo(String path)
