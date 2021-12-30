@@ -21,6 +21,6 @@ android {
 }
 
 dependencies {
-	api 'com.android.support:design:+'
+//	api 'com.android.support:design:+'
     implementation fileTree(dir: "libs", include: ["*.jar"])
 }

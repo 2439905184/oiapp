@@ -3,6 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.littlesandbox.oiapp">
 
+    <!-- 修改或删除 SD 卡中的内容 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -13,21 +16,36 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
+
             <intent-filter>
+
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
+
             </intent-filter>
+
         </activity>
-<activity
-    android:name=".Example">
-</activity>
-<activity
-    android:name=".Aid_javaCode">
-</activity>
+
+        <activity android:name=".Example">
+
+        </activity>
+
+        <activity android:name=".Aid_javaCode">
+
+        </activity>
+
+        <activity android:name=".NewProject">
+
+        </activity>
+
+        <activity android:name=".ProjectInfo">
+
+        </activity>
+
         <meta-data
-          android:name="android.max_aspect"
-          android:value="4.0"/>
+            android:name="android.max_aspect"
+            android:value="4.0"/>
 
     </application>
 

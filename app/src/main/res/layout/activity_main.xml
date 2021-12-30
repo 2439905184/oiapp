@@ -40,6 +40,12 @@
 	<Button
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:text="创建工程"
+		android:onClick="create"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
 		android:text="清空控制台"
 		android:onClick="cls"/>
 
