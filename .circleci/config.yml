@@ -38,6 +38,7 @@ jobs:
       - run:
           name: release build 
           command: |
+            ./gradle wrapper
             chmod +x gradlew
             ./gradlew build
 
