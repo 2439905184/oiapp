@@ -39,7 +39,7 @@ jobs:
           name: release build 
           command: |
             chmod +x gradlew
-            ./gradlew assembleRelease
+            ./gradlew build
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
